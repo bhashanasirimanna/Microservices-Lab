@@ -79,15 +79,15 @@ The following section demonstrates the successful testing of the various microse
 <img width="1495" height="865" alt="Screenshot 2026-02-28 173700" src="https://github.com/user-attachments/assets/dbdc9fad-6a29-4898-a2f6-f523ae1bc0c9" />
 
 
-### 5. Get Payment By ID
+### 8. Get Payment By ID
 **Endpoint:** `GET /payments/1`  
 **Description:** Retrieves the details of a specific Payment by its ID.  
 **Status:** `200 OK`  
 
 <img width="1495" height="687" alt="Screenshot 2026-02-28 173710" src="https://github.com/user-attachments/assets/a0e4b750-b70e-45fb-9597-8397928ed274" />
 
-### 3. Create Payment
-**Endpoint:** `POST /Payments`  
+### 9. Create Payment
+**Endpoint:** `POST /payments`  
 **Description:** Creates a new Payment.  
 **Status:** `201 Created`  
 
