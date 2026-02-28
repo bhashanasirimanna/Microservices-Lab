@@ -1,0 +1,62 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: item-service-route
+          uri: http://item-service:8081
+          predicates:
+            - Path=/items,/items/**,/v3/api-docs/items
+
+        - id: order-service-route
+          uri: http://order-service:8082
+          predicates:
+            - Path=/orders,/orders/**,/v3/api-docs/orders
+
+        - id: payment-service-route
+          uri: http://payment-service:8083
+          predicates:
+            - Path=/payments,/payments/**,/v3/api-docs/payments
+
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    urlsPrimaryName: Item Service
+    urls:
+      - name: Item Service
+        url: /v3/api-docs/items
+      - name: Order Service
+        url: /v3/api-docs/orders
+      - name: Payment Service
+        url: /v3/api-docs/payments
+
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.gateway: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, gateway

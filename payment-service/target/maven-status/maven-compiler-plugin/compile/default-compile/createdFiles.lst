@@ -1,0 +1,4 @@
+com\microservices\paymentservice\config\OpenApiConfig.class
+com\microservices\paymentservice\model\Payment.class
+com\microservices\paymentservice\controller\PaymentController.class
+com\microservices\paymentservice\PaymentServiceApplication.class

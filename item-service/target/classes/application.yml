@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: item-service
+
+server:
+  port: 8081
+
+# Expose OpenAPI docs under a path that API Gateway expects
+springdoc:
+  api-docs:
+    path: /v3/api-docs/items

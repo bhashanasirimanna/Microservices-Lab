@@ -1,0 +1,4 @@
+com\microservices\itemservice\model\Item.class
+com\microservices\itemservice\ItemServiceApplication.class
+com\microservices\itemservice\controller\ItemController.class
+com\microservices\itemservice\config\OpenApiConfig.class
